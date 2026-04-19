@@ -20,7 +20,7 @@ export const addCart = createAsyncThunk(
 );
 
 export const allCart = createAsyncThunk(
-  "product/review",
+  "product/getall",
   async (_, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
