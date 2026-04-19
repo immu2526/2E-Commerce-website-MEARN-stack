@@ -37,7 +37,7 @@ const AdminProduct = () => {
 
     try {
       let response = await axios.post(
-        "http://localhost:3000/api/admin/product/new/product",
+        "https://twoe-commerce-website-mearn-stack.onrender.com/api/admin/product/new/product",
         finalData
       );
 

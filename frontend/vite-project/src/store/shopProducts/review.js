@@ -6,7 +6,7 @@ export const sendReview = createAsyncThunk(
   async ({ data, id }, { rejectWithValue }) => {
     try {
       const review = await axios.post(
-        `http://localhost:3000/api/shop/product/review/${id}/review`,
+        `https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/product/review/${id}/review`,
         data,
         {
           withCredentials: true,
@@ -25,7 +25,7 @@ export const allReview = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/api/shop/product/review/${id}`
+        `https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/product/review/${id}`
       );
       console.log(data);
       return data;
@@ -40,7 +40,7 @@ export const deleteReview = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:3000/api/shop/product/review/${id}`,
+        `https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/product/review/${id}`,
         {
           withCredentials: true,
         }

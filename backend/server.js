@@ -22,13 +22,13 @@ main()
   .then(() => console.log("mongoDB connected sucessfully"))
   .catch((err) => console.log(err));
 
-// localhost
+// Frontend connected
 
 let app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://twoe-commerce-website-mearn-stack.onrender.com",
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",

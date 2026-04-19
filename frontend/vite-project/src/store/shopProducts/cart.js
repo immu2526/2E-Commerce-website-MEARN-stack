@@ -6,7 +6,7 @@ export const addCart = createAsyncThunk(
   async ({ quantity, productid }, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/api/shop/product/cart/new",
+        "https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/product/cart/new",
         { quantity, productid },
         {
           withCredentials: true,
@@ -24,7 +24,7 @@ export const allCart = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
-        "http://localhost:3000/api/shop/product/cart",
+        "https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/product/cart",
         {
           withCredentials: true,
         }
@@ -43,7 +43,7 @@ export const decreaseQuantity = createAsyncThunk(
   async ({ productId }, { rejectWithValue }) => {
     try {
       const { data } = await axios.put(
-        "http://localhost:3000/api/shop/product/cart/update",
+        "https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/product/cart/update",
         { productId },
         {
           withCredentials: true,
@@ -61,7 +61,7 @@ export const deleteCart = createAsyncThunk(
   async ({ productId }, { rejectWithValue }) => {
     try {
       const { data } = await axios.delete(
-        "http://localhost:3000/api/shop/product/cart/delete",
+        "https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/product/cart/delete",
         {
           data: { productId },
           withCredentials: true,

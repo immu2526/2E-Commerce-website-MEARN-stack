@@ -63,8 +63,10 @@ const createOrdered = async (req, res) => {
         },
       ],
       applicationContext: {
-        returnUrl: "http://localhost:5173/shop/paypal-return",
-        cancelUrl: "http://localhost:5173/shop/paypal-cancel",
+        returnUrl:
+          "https://twoe-commerce-website-mearn-stack.onrender.com/shop/paypal-return",
+        cancelUrl:
+          "https://twoe-commerce-website-mearn-stack.onrender.com/shop/paypal-cancel",
       },
     },
   };

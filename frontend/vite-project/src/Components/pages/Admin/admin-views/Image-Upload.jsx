@@ -21,7 +21,7 @@ const Image_upload = ({ setImageUrl, imageUrl }) => {
     let data = new FormData();
     data.append("my_file", file);
     const response = await axios.post(
-      "http://localhost:3000/api/admin/product/image-upload",
+      "https://twoe-commerce-website-mearn-stack.onrender.com/api/admin/product/image-upload",
       data
     );
     // console.log("response", response);

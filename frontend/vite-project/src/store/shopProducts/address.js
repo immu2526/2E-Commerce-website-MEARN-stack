@@ -6,7 +6,7 @@ export const addAddress = createAsyncThunk(
   async ({ userId, form }, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(
-        `http://localhost:3000/api/shop/product/address/${userId}/new`,
+        `https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/product/address/${userId}/new`,
         form
       );
       console.log(data);
@@ -22,7 +22,7 @@ export const featchAddress = createAsyncThunk(
   async (userId, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/api/shop/product/address/${userId}`
+        `https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/product/address/${userId}`
       );
       return data;
     } catch (err) {
@@ -36,7 +36,7 @@ export const deleteAddress = createAsyncThunk(
   async ({ productId, userId }, { rejectWithValue }) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:3000/api/shop/product/address/${userId}/${productId}`
+        `https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/product/address/${userId}/${productId}`
       );
       console.log(data);
       return data;
@@ -51,7 +51,7 @@ export const featchSingleAddress = createAsyncThunk(
   async (addressId, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/api/shop/product/address/${addressId}/edit`
+        `https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/product/address/${addressId}/edit`
       );
       console.log(data);
       return data;
@@ -66,7 +66,7 @@ export const updateAddress = createAsyncThunk(
   async ({ addressId, userId, form }, { rejectWithValue }) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:3000/api/shop/product/address/${addressId}/${userId}/update`,
+        `https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/product/address/${addressId}/${userId}/update`,
         form
       );
       console.log(data);
