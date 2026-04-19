@@ -65,15 +65,22 @@ const userLogin = async (req, res) => {
   );
   console.log(token);
 
-  res.cookie("token", token, { httpOnly: true, secure: false }).json({
-    success: true,
-    message: "Logged in Successfully",
-    user: {
-      email: mongo.email,
-      role: mongo.role,
-      id: mongo._id,
-    },
-  });
+  res
+    .cookie("token", token, {
+      httpOnly: true,
+      secure: true, // HTTPS ke liye
+      sameSite: "none", // Cross-origin ke liye
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+    })
+    .json({
+      success: true,
+      message: "Logged in Successfully",
+      user: {
+        email: mongo.email,
+        role: mongo.role,
+        id: mongo._id,
+      },
+    });
 };
 
 // logout
