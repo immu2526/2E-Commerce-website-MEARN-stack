@@ -28,7 +28,7 @@ let app = express();
 
 app.use(
   cors({
-    origin: "https://twoe-commerce-website-mearn-stack.onrender.com",
+    origin: "https://twoe-commerce-website-mearn-stack-backend.onrender.com",
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",

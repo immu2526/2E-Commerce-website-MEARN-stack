@@ -7,7 +7,7 @@ export const allProduct = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
-        "https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/product"
+        "https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/shop/product"
       );
 
       return data;
@@ -22,7 +22,7 @@ export const individualProduct = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
-        `https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/product/${id}/individual`
+        `https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/shop/product/${id}/individual`
       );
 
       // console.log(data);

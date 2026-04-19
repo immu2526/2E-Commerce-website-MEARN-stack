@@ -6,7 +6,7 @@ export const registerUser = createAsyncThunk(
   async (formData, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(
-        "https://twoe-commerce-website-mearn-stack.onrender.com/api/auth/register",
+        "https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/auth/register",
         formData
       );
       return data;
@@ -23,7 +23,7 @@ export const loginUser = createAsyncThunk(
   async (formData, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(
-        "https://twoe-commerce-website-mearn-stack.onrender.com/api/auth/login",
+        "https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/auth/login",
         formData,
         { withCredentials: true }
       );
@@ -41,7 +41,7 @@ export const check_Autho = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
-        "https://twoe-commerce-website-mearn-stack.onrender.com/api/auth/check-auth",
+        "https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/auth/check-auth",
         {
           withCredentials: true,
           headers: {
@@ -65,7 +65,7 @@ export const logOut = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(
-        "https://twoe-commerce-website-mearn-stack.onrender.com/api/auth/logout",
+        "https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/auth/logout",
         {},
         { withCredentials: true }
       );

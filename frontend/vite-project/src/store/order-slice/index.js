@@ -6,7 +6,7 @@ export const createNewOrder = createAsyncThunk(
   async (orderData, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(
-        "https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/order/payment/create",
+        "https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/shop/order/payment/create",
         orderData
       );
       console.log(data);
@@ -22,7 +22,7 @@ export const captureOrder = createAsyncThunk(
   async ({ paymentId, payerId, orderId }, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(
-        "https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/order/payment/capture",
+        "https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/shop/order/payment/capture",
         { paymentId, payerId, orderId }
       );
       console.log(data);

@@ -8,7 +8,7 @@ export const featchAllProduct = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       let { data } = await axios.get(
-        "https://twoe-commerce-website-mearn-stack.onrender.com/api/admin/product"
+        "https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/admin/product"
       );
 
       return data;
@@ -25,7 +25,7 @@ export const featchSingleProduct = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(
-        `https://twoe-commerce-website-mearn-stack.onrender.com/api/admin/product/${id}/single`
+        `https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/admin/product/${id}/single`
       );
       console.log(data);
       return data;
@@ -42,7 +42,7 @@ export const updateProduct = createAsyncThunk(
   async ({ data, id }, { rejectWithValue }) => {
     try {
       const response = await axios.put(
-        `https://twoe-commerce-website-mearn-stack.onrender.com/api/admin/product/${id}`,
+        `https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/admin/product/${id}`,
         data
       );
       console.log(response);
@@ -60,7 +60,7 @@ export const deleteProduct = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       let { data } = await axios.delete(
-        `https://twoe-commerce-website-mearn-stack.onrender.com/api/admin/product/${id}/delete`
+        `https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/admin/product/${id}/delete`
       );
       console.log(data);
       return data;

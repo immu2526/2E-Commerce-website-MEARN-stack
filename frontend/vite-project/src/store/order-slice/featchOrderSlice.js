@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const featchOrder = createAsyncThunk("featch/order", async (userId) => {
   const { data } = await axios.get(
-    `https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/order/payment/${userId}/allorder`
+    `https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/shop/order/payment/${userId}/allorder`
   );
   return data;
 });
@@ -12,7 +12,7 @@ export const featchOrderDetails = createAsyncThunk(
   "order/details",
   async (id) => {
     const { data } = await axios.get(
-      `https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/order/payment/details/${id}`
+      `https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/shop/order/payment/details/${id}`
     );
 
     console.log(data);
@@ -23,7 +23,7 @@ export const featchOrderDetails = createAsyncThunk(
 
 export const allOrder = createAsyncThunk("all/order", async () => {
   const { data } = await axios.get(
-    "https://twoe-commerce-website-mearn-stack.onrender.com/api/shop/order/payment"
+    "https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/shop/order/payment"
   );
 
   console.log(data);
