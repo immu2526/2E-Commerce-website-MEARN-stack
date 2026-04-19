@@ -64,9 +64,9 @@ const createOrdered = async (req, res) => {
       ],
       applicationContext: {
         returnUrl:
-          "https://twoe-commerce-website-mearn-stack-backend.onrender.com/shop/paypal-return",
+          "https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/shop/order/payment/paypal-return",
         cancelUrl:
-          "https://twoe-commerce-website-mearn-stack-backend.onrender.com/shop/paypal-cancel",
+          "https://twoe-commerce-website-mearn-stack-backend.onrender.com/api/shop/order/payment/paypal-cancel",
       },
     },
   };
