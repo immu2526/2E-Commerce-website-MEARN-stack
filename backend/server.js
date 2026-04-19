@@ -28,7 +28,10 @@ let app = express();
 
 app.use(
   cors({
-    origin: "https://twoe-commerce-website-mearn-stack-backend.onrender.com",
+    origin: [
+      "http://localhost:5173", // local development ke liye
+      "https://twoe-commerce-website-mearn-stack.onrender.com", // production frontend
+    ],
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
